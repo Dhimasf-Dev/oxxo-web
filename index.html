@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+             * {
+                margin: 0;
+                padding: 0;
+                font-family: 'poppins', sans-serif;
+            }
+
+            header {
+                position: fixed;
+                margin: 20px;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: 0.6s;
+                z-index: 10000;
+            }
+
+            header.sticky {
+                padding: 12px 20px;
+                margin: 0;
+                background: #fff;
+            }
+
+            header.sticky ul li a {
+                color: black;
+            }
+
+            header ul {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            header ul li {
+                position: relative;
+                list-style: none;
+            }
+
+            header ul li a {
+                position: relative;
+                margin: 0 15px;
+                text-decoration: none;
+                color: #fff;
+                letter-spacing: 2px;
+                font-weight: 500;
+                transition: 0.6s;
+            }
+
+            header ul li :hover {
+                padding: 10px;
+                border-radius: 10px;
+                background-color: #03e9f4;
+                box-shadow: 0 0 5px #03e9f4;
+                box-shadow: 0 0 25px #03e9f4;
+                box-shadow: 0 0 50px #03e9f4;
+            }
+
+
+            body {
+                background: #0a2a43 ;
+                min-height: 1500px;
+            }
+
+            .container {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(to top, #0a2a43, transparent);
+                z-index: 10000;
+            }
+
+
+            .container img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+            }
+
+            #text {
+                position: relative;
+                color: white;
+                font-size: 8em;
+                z-index: 1;
+            }
+
+            #road {
+                z-index: 2;
+            }
+
+            h1 {
+                margin-bottom: 50px;
+            }
+
+            h1:hover {
+                color: #03e9f4;
+            }
+
+            .container2 {
+                color: white;
+                text-align: center;
+                padding: 150px;
+            }
+
+            .container3 {
+                background-color: white;
+                text-align: center;
+                padding: 100px;
+            }
+
+            b:hover {
+                color: #03e9f4;
+                box-shadow: 0 0 5px #03e9f4;
+                box-shadow: 0 0 25px #03e9f4;
+                box-shadow: 0 0 50px #03e9f4;
+                box-shadow: 0 0 200px #03e9f4;
+            }
+
+            .container4 {
+                color: white;
+                text-align: center;
+                padding: 150px;
+            }
+
+            .flex {
+                display: flex;
+                justify-content: space-around;
+            }
+
+
+            .box {
+                color: black;
+                font-size: 14px;
+                border: 1px solid white;
+                margin: 25px;
+                padding: 10px 30px 100px 30px ;
+                border-radius: 25px;
+                width: 300px;
+                height: 90px;
+                background-size: cover;
+                background-image: url(https://i.ibb.co/NjvbmbB/bg2.gif);
+            }
+
+            .box:hover {
+                border-color: #03e9f4;
+                box-shadow: 0 0 5px #03e9f4;
+                box-shadow: 0 0 25px #03e9f4;
+                box-shadow: 0 0 50px #03e9f4;
+            }
+
+
+            .container5 {
+                padding: 150px;
+                text-align: center;
+                background-color: white;
+            }
+
+            .container6 {
+                padding: 150px;
+                text-align: center;
+                color: white;
+            }
+
+            .container6 p {
+                margin-bottom: 50px;
+            }
+
+            .contact1 input {
+                margin: 12px 0px 22px 0px;
+                height: 35px;
+                border-radius: 10px;
+            }
+
+            .contact1 textarea {
+                width: 255px;
+                height: 120px;
+                margin: 12px 0px 0px 0px;
+                border-radius: 10px;
+                justify-content: center;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+
+            .button {
+                background-color: teal;
+                color: white;
+                margin-top: 70px;
+                padding: 10px 60px;
+                border-radius: 10px;
+            }
+
+            .button:hover {
+                background: #03e9f4;
+                box-shadow: 0 0 5px #03e9f4;
+                box-shadow: 0 0 25px #03e9f4;
+                box-shadow: 0 0 50px #03e9f4;
+                box-shadow: 0 0 200px #03e9f4;
+            }
+
+            .footer {
+                background-color: white;
+                text-align: center;
+                padding: 20px;
+            }
+
+            i {
+                color: black;
+                margin: 70px 30px;
+            }
+
+            i:hover {
+                color: #03e9f4;
+                box-shadow: 0 0 5px #03e9f4;
+                box-shadow: 0 0 25px #03e9f4;
+                box-shadow: 0 0 50px #03e9f4;
+                box-shadow: 0 0 200px #03e9f4;
+            }
+
+            @media screen and (max-width:680px) {
+
+                header {
+                    display: none;
+                }
+
+                .container2, .container3, .container4 ,.container5, .container6 {
+                    padding: 50px;
+                }
+
+                .container4 .flex {
+                    display: grid;
+                }
+
+                .container5 .flex img {
+                   width: 300px;
+                   height: 200px;
+                }
+
+                i {
+                    margin: 40px 35px 20px 0;
+                }
+            }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>OXXO</title>
+</head>
+
+<header>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
+        <li><a href="#ourServices">Services</a></li>
+        <li><a href="#contactUs">contact Us</a></li>
+    </ul>
+</header>
+
+<body>
+    <div class="container">
+        <img src="https://i.ibb.co/CJ2cDwt/bg.jpg" alt="background" id="bg">
+        <img src="https://i.ibb.co/Gkd4tvV/moon.png" alt="moon" id="moon">
+        <img src="https://i.ibb.co/ZMvmLZM/mountain.png" alt="mountain" id="mountain">
+        <img src="https://i.ibb.co/n0tc1Fw/road.png" alt="road" id="road">
+        <h2 id="text">OXXO</h2>
+    </div>
+
+    <div class="container2">
+        <h1>Your Brand, Our Jobs</h1>
+        <p>Delivering your brand story to the world Through our innovative marketing tools</p>
+    </div>
+
+    <div class="container3" id="aboutUs">
+        <h1>ABOUT US</h1>
+        <p>We are a group of proffesionals who drives a unique way to advertise, 
+            specialize in <b>digital marketing and branding.</b>
+            Giving the best result for your audience through <b>technology and smart distribution</b> content.
+        </p>
+        <a href="https://www.instagram.com/oxxo.agency/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+    </div>
+
+    <div class="container4">
+        <h1 id="ourServices">OUR SERVICES</h1>
+        <div class="flex">
+            <div class="box">
+                <h4>Web Design & Development</h4>  
+            </div>
+            <div class="box">
+                <h4>Digital Marketing Social Media Optimization </h4>    
+            </div>
+            <div class="box">
+                <h4>Search Engine Optimization </h4>    
+            </div>
+        </div>
+        <div class="flex">
+            <div class="box">
+                <h4>Mobile App Production </h4>    
+            </div>
+            <div class="box">
+                <h4>E-commerce Marketing & Management </h4>    
+            </div>
+            <div class="box">
+                <h4>Design & VideoProduction</h4>    
+            </div>
+        </div>
+    </div>
+
+    <div class="container5">
+        <h1>OUR CLIENTS.</h1>
+        <div class="flex">
+            <img class="client" src="https://i.ibb.co/jRRR30r/clients.png" alt="clients"/>
+        </div>
+    </div>
+
+    <div class="container6">
+        <h1 id="contactUs">contact us.</h1>
+        <p>For any project inquiries drop us a hello!</p>
+        <div class="contact1">
+            <h4>Name</h4>
+            <input type="text" placeholder="Your Name"/>
+            <h4>Email</h4>
+            <input type="text" placeholder="Your Email"/>
+            <h4>Subject</h4>
+            <input type="text" placeholder="Subject"/>
+            <h4>Message</h4>
+            <textarea placeholder="Greet Us..."></textarea>
+        </div>       
+        <input class="button" type="button" value="Submit"/> 
+    </div>
+
+    <div class="footer">
+        <a href="https://www.instagram.com/oxxo.agency/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+        <p>&copy 2020 oxxo. All Right Reserved. </p>
+    </div>
+
+    <!-- <script src="function.js"></script> -->
+    <script>
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon")
+        let mountain = document.getElementById("mountain")
+        let road = document.getElementById("road")
+        let text = document.getElementById("text")
+        let header = document.querySelector("header")
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px'
+            moon.style.left = -value * 0.5 + 'px'
+            mountain.style.top = -value * 0.15 + 'px'
+            road.style.top = value * 0.15 + 'px'
+            text.style.top = value * 1 + 'px'
+            header.classList.toggle("sticky", window.scrollY )
+        })
+    </script>
+    
+</body>
+</html>
